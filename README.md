@@ -1,21 +1,24 @@
 # PrismFall
 
-A command-line interface (CLI) text-based adaptation of the classic Mastermind board game, built natively in C++ to practice core programming patterns, data validation, and state tracking.
+A 2D graphical adaptation of the classic Mastermind board game, built natively in C++ using the SFML (Simple and Fast Multimedia Library) framework to practice state management, multimedia asset pipelining, and interactive user interface logic.
 
 ## Technical Implementations
-* **Data Structures:** Utilized fixed-size arrays/vectors to track and evaluate guess sequences against generated codes.
-* **Algorithmic Logic:** Implemented precise positional checking loops to evaluate exact matches (correct color and position) versus partial matches (correct color, wrong position).
-* **Robust Input Validation:** Created continuous stream checking handlers to catch malformed inputs, prevent program crashes, and enforce strict gameplay rules.
+* **Multimedia Integration:** Configured asset streaming to bind custom texture graphics and reactive audio cues (`.wav`) directly into real-time gameplay states.
+* **Algorithmic Evaluation:** Designed evaluation matrices to instantly compute precise match scores (exact position vs. correct color) for user puzzle inputs.
+* **Event-Driven UI Loop:** Implemented non-blocking event polling to handle menu navigation, grid selections, and asset updates cleanly without frame rendering lag.
 
-## Gameplay Overview
-The game generates a hidden sequence of colors/pegs. The player has a limited number of attempts to guess the exact combination, receiving precise analytical feedback after each turn until they either solve the sequence or run out of turns.
+## Asset Architecture
+The project structure manages game loops alongside custom textures, UI fonts (`arial.ttf`), and sound banks to create a polished, responsive user experience.
 
-## How to Run
+## Prerequisites
+To compile and run this project, you need the SFML library installed on your system.
+
+## How to Run (Windows / GCC)
 1. Clone the repository:
    git clone https://github.com/241974-nah/PrismFall.git
 
-2. Compile using any standard C++ compiler (e.g., g++):
-   g++ main.cpp -o PrismFall
+2. Compile linking the SFML libraries:
+   g++ ConsoleApplication1.cpp -o PrismFall -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 3. Run the executable:
    ./PrismFall
